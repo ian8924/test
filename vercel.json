@@ -1,0 +1,28 @@
+{
+  "buildCommand": "npm run build:prod",
+  "devCommand": "npm run dev:local",
+  "installCommand": "npm install",
+  "outputDirectory": ".output",
+  "framework": "nuxtjs",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "dev": true
+    }
+  }
+}
